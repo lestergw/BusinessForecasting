@@ -1,6 +1,3 @@
-## Set the working directory
-setwd("C:/Users/grif3/OneDrive/Desktop/ISA 444")
-
 ## Load the packages
 library(COVID19)
 

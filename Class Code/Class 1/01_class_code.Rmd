@@ -49,11 +49,16 @@ The grammar of graphics is a **framework** which follows a **layered approach** 
 > ''ggplot2 is a system for declaratively creating graphics, based on The Grammar of Graphics. You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details''
 
 ```{r ggplotWebFigures, echo=FALSE, out.width="48%", fig.show='hold'}
-knitr::include_graphics(c("https://www.ericchowkokyew.com/wp-content/uploads/2019/07/image-2.png",
-                          "https://englelab.gatech.edu/useRguide/images/dataviz/ge_all.png"))
+knitr::include_graphics("https://englelab.gatech.edu/useRguide/images/dataviz/ge_all.png")
 ``` 
 
 ## FANG Example
+```{r data}
+## Create an object and get our data
+FANG = tq_get(x = c('AMZN', 'FB', 'GOOG', 'NFLX'), #stocks that we want
+              from = '2020-01-01', #gets this date or the next trading date
+              to = '2021-01-23') #gets data up to but not including the date
+```
 
 ```{r fang}
 ## Let's build the plot
